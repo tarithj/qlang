@@ -1,0 +1,24 @@
+--
+qLang | Design and idea by Tarith Jayasooriya
+--
+
+
+        <!--question pack-->
+<!ELEMENT qPack (qSet+)>
+<!ATTLIST qPack text #PCDATA #REQUIRED>
+<!ATTLIST qPack author #PCDATA>
+
+
+        <!--question set-->
+<!ELEMENT qSet (q+)>
+<!ATTLIST qSet text #PCDATA #REQUIRED>
+
+        <!--questions-->
+<!ELEMENT q (choice+)>
+<!ATTLIST q text #PCDATA #REQUIRED>
+
+        <!--choice-->
+<!ELEMENT choice (#PCDATA)>
+<!ATTLIST choice correct (true|false) #REQUIRED>
+<!ATTLIST choice value #PCDATA #REQUIRED>
+

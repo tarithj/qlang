@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<qPack xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qlang.xsd">
+    <head text="year end test paper"/>
+    <info  author="tarith"/>
+
+    <qSet text="answer all the questions below">
+        <q text="what is">
+            <choice correct="false" text=""/>
+            <choice correct="true" text=""/>
+        </q>
+        <q text="who is">
+            <choice correct="true" text=""/>
+            <choice correct="false" text=""/>
+        </q>
+    </qSet>
+
+</qPack>

@@ -1,0 +1,1 @@
+statik --src=./lang/def

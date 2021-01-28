@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<qPack xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./def/qlang.xsd">
+    <head text="write your test papers header here"/>
+    <info author="write the name of the author here(remove info if necessary)"/>
+
+    <!--add more main questions-->
+    <qSet text="">
+        <!--add more branch questions-->
+        <q text="">
+            <!--add more choices-->
+            <choice text="" correct=""/>
+        </q>
+    </qSet>
+</qPack>

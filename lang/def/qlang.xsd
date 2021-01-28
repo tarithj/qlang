@@ -1,0 +1,49 @@
+<?xml version = "1.0"?>
+<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+    <!-- qPack -->
+    <xs:complexType name="qPackType">
+        <xs:sequence>
+            <xs:element name="head" type="headType" maxOccurs="1" minOccurs="1" />
+            <xs:element name="info" type="infoType" maxOccurs="1" />
+            <xs:element name = "qSet" type = "qSetType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name = 'qPack' type = 'qPackType' />
+
+    <!-- head -->
+    <xs:complexType name="headType">
+        <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:element name = 'Head' type = 'headType' />
+
+    <!-- info -->
+    <xs:complexType name="infoType">
+        <xs:attribute name="author" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:element name="info" type="infoType" />
+
+    <!-- qSet -->
+    <xs:complexType name="qSetType">
+        <xs:sequence>
+            <xs:element name = "q" type = "qType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:element name = 'qSet' type = 'qSetType' />
+
+    <!-- q -->
+    <xs:complexType name="qType">
+        <xs:sequence>
+            <xs:element name="choice" type="choiceType" minOccurs="2" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="text" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:element name="q" type="qType"/>
+
+    <!-- choice -->
+    <xs:complexType name="choiceType">
+        <xs:attribute name="text" type="xs:string" use="required"/>
+        <xs:attribute name="correct" type="xs:boolean" use="required"/>
+    </xs:complexType>
+    <xs:element name="choice" type="choiceType"/>
+</xs:schema>
