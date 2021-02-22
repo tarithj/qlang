@@ -60,6 +60,6 @@ choice is a empty element.
 
 | Attribute | Value         | Description                          |
 | --------- | ------------- | ------------------------------------ |
-| correct   | (true\|false) | whether the choice is correct or not |
+| correct   | (true\false) | whether the choice is correct or not |
 | value     | String        | The heading of the choice question   |
 
